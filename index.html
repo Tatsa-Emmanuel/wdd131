@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+    <title>WDD 131 - Dynamic Web Fundamentals - Tatsa Zoho Noubosse Emmanuel</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Tatsa Zoho Noubosse Emmanuel. Course landing page demonstrating HTML, CSS, and JS fundamentals.">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+    
+    <!-- Google Fonts API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- Styles and Scripts -->
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Tatsa Zoho Noubosse Emmanuel</h1>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+        <nav>
+            <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+            <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a>
+            <a href="#">Final Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Tatsa Zoho Noubosse Emmanuel</h1>
+        
+        <div class="card-grid">
+            <!-- About Me Card -->
+            <section class="card">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>Hello! My name is Tatsa Zoho Noubosse Emmanuel. I am currently studying Applied Business Management and learning the fundamentals of dynamic web development.</p>
+                    <img src="images/profile.jfif" alt="Profile picture of Tatsa Zoho Noubosse Emmanuel" width="150" height="200">
+                </div>
+                
+                <h3>Mbouda, Cameroon</h3>
+                <div class="country-info">
+                    <div class="flag-container">
+                        <img src="images/flag.jpg" alt="Flag of Cameroon" width="120" height="80">
+                        <p class="caption">Official Flag of Cameroon</p>
+                    </div>
+                    <p>Cameroon is a country in Central Africa, often known as "Africa in miniature" for its geological and cultural diversity. It features beaches, deserts, mountains, rainforests, and savannas.</p>
+                </div>
+            </section>
+
+            <!-- Web Dev Resources Card -->
+            <section class="card">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+                    <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+                    <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+                    <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 Cameroon</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
