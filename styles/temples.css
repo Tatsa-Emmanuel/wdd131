@@ -1,7 +1,6 @@
 /* --- Global Variables & Resets --- */
 :root {
-    --primary-color: #3b0059; /* Dark Purple from screenshot */
-    --text-light: #ffffff;
+    --primary-color: #3b0059; /* Dark Purple */
     --text-dark: #333333;
     --font-family: 'Roboto', sans-serif;
 }
@@ -21,7 +20,7 @@ body {
 /* --- Header & Mobile Nav --- */
 header {
     background-color: var(--primary-color);
-    color: var(--text-light);
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,7 +37,7 @@ header h1 {
     font-size: 2rem;
     border: none;
     background: none;
-    color: var(--text-light);
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -72,12 +71,12 @@ header h1 {
     padding: 1rem;
     text-align: center;
     text-decoration: none;
-    color: var(--text-light);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-top: 1px solid #521673; /* Converted from rgba() to a solid lighter purple hex */
 }
 
 .navigation li a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #250038; /* Converted from rgba() to a solid deep purple hex */
 }
 
 /* --- Main Content Layout --- */
@@ -110,7 +109,7 @@ figure img {
     display: block;
     margin: 0 auto;
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px #e0e0e0; /* Converted from rgba() to a solid light gray hex shadow */
 }
 
 figcaption {
@@ -122,7 +121,7 @@ figcaption {
 /* --- Footer --- */
 footer {
     background-color: var(--primary-color);
-    color: var(--text-light);
+    color: #ffffff;
     text-align: center;
     padding: 1.5rem;
     margin-top: 2rem;
