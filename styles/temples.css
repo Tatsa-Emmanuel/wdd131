@@ -1,0 +1,133 @@
+/* --- Global Variables & Resets --- */
+:root {
+    --primary-color: #3b0059; /* Dark Purple from screenshot */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #ffffff;
+    color: var(--text-dark);
+}
+
+/* --- Header & Mobile Nav --- */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+/* Hamburger Button Styling */
+#menu {
+    font-size: 2rem;
+    border: none;
+    background: none;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰"; /* Hamburger icon */
+}
+
+#menu.open::before {
+    content: "✖"; /* X icon when open */
+}
+
+/* Navigation List (Hidden by default on mobile) */
+.navigation {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+}
+
+/* Toggled via JavaScript */
+.navigation.open {
+    display: flex;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navigation li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* --- Main Content Layout --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* CSS Grid (Mobile View: 1 Column) */
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
