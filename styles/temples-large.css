@@ -1,7 +1,6 @@
 /* Media Query for larger views (Desktop/Tablet) */
 @media screen and (min-width: 768px) {
     
-    /* Header & Navigation Changes */
     header {
         display: flex;
         justify-content: space-between;
@@ -9,13 +8,13 @@
     }
 
     #menu {
-        display: none; /* Hide hamburger button on large screens */
+        display: none; 
     }
 
     .navigation {
         display: flex;
         flex-direction: row;
-        position: static; /* Removes the absolute positioning from mobile */
+        position: static; 
         width: auto;
     }
 
@@ -24,7 +23,6 @@
         padding: 0.5rem 1rem;
     }
 
-    /* CSS Grid Changes (Large View: 3 Columns) */
     .res-grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
