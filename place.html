@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Cameroon</title>
+    <meta name="description" content="Country page for Cameroon, WDD 131 Dynamic Web Fundamentals">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    
+    <!-- CSS and JS -->
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Cameroon</h1>
+    </header>
+
+    <main>
+        <div class="hero-container">
+            <!-- Responsive Images using srcset -->
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/cameroon-large.jpg">
+                <img src="images/cameroon-small.jpg" alt="Beautiful landscape of Cameroon" width="500" height="300" loading="lazy">
+            </picture>
+
+            <!-- Data Section -->
+            <section class="info-card data-card">
+                <h2>Data</h2>
+                <dl class="grid-list">
+                    <dt>Area:</dt>
+                    <dd>475,442 sq km</dd>
+                    <dt>Population:</dt>
+                    <dd>27,914,536</dd>
+                    <dt>Capital:</dt>
+                    <dd>Yaoundé</dd>
+                    <dt>Languages:</dt>
+                    <dd>French, English</dd>
+                    <dt>Currency:</dt>
+                    <dd>CFA Franc (XAF)</dd>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+1 (WAT)</dd>
+                    <dt>Calling Code:</dt>
+                    <dd>+237</dd>
+                    <dt>Internet TLD:</dt>
+                    <dd>.cm</dd>
+                </dl>
+            </section>
+
+            <!-- Weather Section -->
+            <section class="info-card weather-card">
+                <h2 class="weather-title">Weather</h2>
+                
+                <!-- SVG Icon (Mobile Only) -->
+                <div class="weather-icon-svg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </div>
+
+                <dl class="grid-list">
+                    <dt>Temperature:</dt>
+                    <dd><span id="temperature">10</span> °C</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Partly Cloudy</dd>
+                    <dt>Wind:</dt>
+                    <dd><span id="windspeed">5</span> km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd><span id="windchill"></span></dd>
+                </dl>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 Cameroon</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
