@@ -4,33 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Filtered Temple Album</title>
-    <meta name="description" content="Filtered Temple Album for WDD 131 Dynamic Web Fundamentals">
-    <meta name="author" content="Your Name">
+    <meta name="description" content="Filtered Temple Album displaying Latter-day Saint temples with interactive filtering for WDD 131 Dynamic Web Fundamentals.">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
     
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="styles/filtered-temples.css">
-    
     <script src="scripts/filtered-temples.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Temple Album</h1>
-        <nav class="navigation">
-            <button id="home">Home</button>
-            <button id="old">Old</button>
-            <button id="new">New</button>
-            <button id="large">Large</button>
-            <button id="small">Small</button>
+        <nav>
+            <a href="#" id="home">Home</a>
+            <a href="#" id="old">Old</a>
+            <a href="#" id="new">New</a>
+            <a href="#" id="large">Large</a>
+            <a href="#" id="small">Small</a>
         </nav>
     </header>
 
     <main>
         <h2 id="gallery-title">Home</h2>
-        <!-- JavaScript will inject the temple cards here -->
         <div id="temple-gallery" class="grid-container"></div>
     </main>
 

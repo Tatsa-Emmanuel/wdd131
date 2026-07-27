@@ -1,4 +1,3 @@
-// 1. Array of Temple Objects (Original + 3 New)
 const temples = [
     {
       templeName: "Aba Nigeria",
@@ -49,7 +48,6 @@ const temples = [
       area: 116642,
       imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // --- 3 Added Temples ---
     {
       templeName: "Salt Lake",
       location: "Salt Lake City, Utah",
@@ -73,64 +71,46 @@ const temples = [
     }
 ];
 
-// 2. Select DOM Elements
 const gallery = document.getElementById("temple-gallery");
 const title = document.getElementById("gallery-title");
 
-// 3. Function to build the HTML for the temple cards
 function renderTemples(filteredTemples) {
-    // Clear out existing cards before rendering new ones
     gallery.innerHTML = "";
-
     filteredTemples.forEach(temple => {
-        // Create elements
         let card = document.createElement("div");
         card.className = "temple-card";
-
         card.innerHTML = `
             <h3>${temple.templeName}</h3>
             <p><span class="label">Location:</span> ${temple.location}</p>
             <p><span class="label">Dedicated:</span> ${temple.dedicated}</p>
             <p><span class="label">Size:</span> ${temple.area} sq ft</p>
-            <!-- Native Lazy Loading added below -->
             <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" width="400" height="250">
         `;
-        
-        // Append to the grid container
         gallery.appendChild(card);
     });
 }
 
-// 4. Initial Render (Show all temples on load)
+// Initial render
 renderTemples(temples);
 
-// 5. Navigation Filter Event Listeners
-document.getElementById("home").addEventListener("click", () => {
-    title.textContent = "Home";
-    renderTemples(temples);
-});
+// Navigation filtering setup with event.preventDefault() for <a> elements
+function setupFilterLink(id, filterFunc, titleText) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.addEventListener("click", (e) => {
+            e.preventDefault();
+            title.textContent = titleText;
+            renderTemples(filterFunc());
+        });
+    }
+}
 
-document.getElementById("old").addEventListener("click", () => {
-    title.textContent = "Old Temples";
-    // Parse the year from the "YYYY, Month, DD" string
-    renderTemples(temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900));
-});
+setupFilterLink("home", () => temples, "Home");
+setupFilterLink("old", () => temples.filter(t => parseInt(t.dedicated.split(",")[0]) < 1900), "Old Temples");
+setupFilterLink("new", () => temples.filter(t => parseInt(t.dedicated.split(",")[0]) > 2000), "New Temples");
+setupFilterLink("large", () => temples.filter(t => t.area > 90000), "Large Temples");
+setupFilterLink("small", () => temples.filter(t => t.area < 10000), "Small Temples");
 
-document.getElementById("new").addEventListener("click", () => {
-    title.textContent = "New Temples";
-    renderTemples(temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000));
-});
-
-document.getElementById("large").addEventListener("click", () => {
-    title.textContent = "Large Temples";
-    renderTemples(temples.filter(temple => temple.area > 90000));
-});
-
-document.getElementById("small").addEventListener("click", () => {
-    title.textContent = "Small Temples";
-    renderTemples(temples.filter(temple => temple.area < 10000));
-});
-
-// 6. Footer Dates
+// Dynamic Footer Dates
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
