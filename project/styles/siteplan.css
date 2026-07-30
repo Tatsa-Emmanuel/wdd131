@@ -1,0 +1,146 @@
+/* --- Global Variables (Color Scheme) --- */
+:root {
+    --primary-navy: #1D3557;
+    --accent-blue: #457B9D;
+    --bg-offwhite: #F1FAEE;
+    --text-charcoal: #1A1A1A;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-offwhite);
+    color: var(--text-charcoal);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+/* --- Typography & Headings --- */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--primary-navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 5px solid var(--accent-blue);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* --- Main Content Layout --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    background-color: #ffffff;
+    border: 1px solid var(--accent-blue);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+section h3 {
+    color: var(--primary-navy);
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+section p, section ul {
+    margin-bottom: 1rem;
+}
+
+section ul {
+    padding-left: 2rem;
+}
+
+/* --- Tables (Color Schema Display) --- */
+.design-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.design-table th, .design-table td {
+    border: 1px solid #cccccc;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.design-table th {
+    background-color: var(--accent-blue);
+    color: #ffffff;
+    font-family: var(--font-heading);
+}
+
+/* Color swatch blocks inside the table */
+.primary-color { background-color: var(--primary-navy); color: white; }
+.secondary-color { background-color: var(--accent-blue); color: white; }
+.light-color { background-color: var(--bg-offwhite); color: var(--text-charcoal); }
+.dark-color { background-color: var(--text-charcoal); color: white; }
+
+/* --- Wireframe Layout --- */
+.wireframe-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.wireframe {
+    text-align: center;
+}
+
+.wireframe h4 {
+    margin-bottom: 1rem;
+    color: var(--primary-navy);
+}
+
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+    border: 2px dashed var(--accent-blue);
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-navy);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* --- Media Queries --- */
+@media screen and (min-width: 768px) {
+    .wireframe-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+}
