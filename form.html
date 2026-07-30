@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Product Review Form</title>
+    <meta name="description" content="Product Review Form for WDD 131 Dynamic Web Fundamentals">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="review-form">
+            
+            <!-- Product Name (Populated via JS) -->
+            <div class="form-group">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </div>
+
+            <!-- Overall Rating -->
+            <fieldset class="form-group rating-group">
+                <legend>Overall Rating</legend>
+                <div class="star-rating">
+                    <label class="star-label">
+                        <span>☆</span>
+                        <input type="radio" name="rating" value="1" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆</span>
+                        <input type="radio" name="rating" value="2" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆☆</span>
+                        <input type="radio" name="rating" value="3" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆☆☆</span>
+                        <input type="radio" name="rating" value="4" required>
+                    </label>
+                    <label class="star-label">
+                        <span>☆☆☆☆☆</span>
+                        <input type="radio" name="rating" value="5" required>
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- Date of Installation -->
+            <div class="form-group">
+                <label for="date">Date of Installation</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <!-- Useful Features -->
+            <fieldset class="form-group features-group">
+                <legend>Which features did you find useful in the product?<br><span class="subtitle">(Check all that apply)</span></legend>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" id="feature-durability" name="features" value="durability">
+                    Durability
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="feature-ease" name="features" value="ease">
+                    Ease of Use
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="feature-performance" name="features" value="performance">
+                    Performance
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="feature-design" name="features" value="design">
+                    Design
+                </label>
+            </fieldset>
+
+            <!-- Written Review -->
+            <div class="form-group">
+                <label for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="review" name="review" rows="4"></textarea>
+            </div>
+
+            <!-- User Name -->
+            <div class="form-group">
+                <label for="username">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <input type="submit" value="Post Review" class="submit-btn">
+            </div>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 Cameroon</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

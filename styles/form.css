@@ -1,0 +1,202 @@
+/* Global Reset and Variables */
+:root {
+    --primary-color: #2b002b; 
+    --bg-color: #d8cdd8; 
+    --text-color: #111111;
+    --white: #ffffff;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header & Footer */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+#lastModified {
+    color: #ffd700;
+}
+
+/* Form Container */
+main {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--bg-color);
+    border-radius: 4px;
+    width: 90%;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Form Groups & Labels */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label, legend {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.subtitle {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.optional {
+    color: #0000ee;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Inputs, Selects, Textareas */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: var(--font-family);
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Star Rating Radio Buttons */
+.star-rating {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    margin-top: 0.5rem;
+}
+
+.star-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.star-label span {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+/* Checkboxes */
+.features-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: var(--white);
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 1rem;
+    border: 1px solid #999999;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #eeeeee;
+}
+
+/* Confirmation Page Styles */
+.confirmation-container {
+    text-align: center;
+    background-color: var(--white);
+}
+
+.confirmation-container h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.review-counter {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.return-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.return-link:hover {
+    background-color: #1a001a;
+}
