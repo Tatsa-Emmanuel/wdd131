@@ -1,9 +1,11 @@
-/* Global Reset and Variables */
+
 :root {
     --primary-color: #2b002b; 
     --bg-color: #d8cdd8; 
     --text-color: #111111;
-    --white: #ffffff;
+    --light-color: #ffffff;
+    --accent-color: #ffd700;
+    --border-color: #cccccc;
     --font-family: 'Roboto', sans-serif;
 }
 
@@ -16,7 +18,7 @@
 body {
     font-family: var(--font-family);
     color: var(--text-color);
-    background-color: var(--white);
+    background-color: var(--light-color);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -25,14 +27,14 @@ body {
 /* Header & Footer */
 header {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--light-color);
     text-align: center;
     padding: 1.5rem;
 }
 
 footer {
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--light-color);
     text-align: center;
     padding: 1.5rem;
     margin-top: auto;
@@ -43,17 +45,17 @@ footer p {
 }
 
 #lastModified {
-    color: #ffd700;
+    color: var(--accent-color);
 }
 
 /* Form Container */
 main {
-    max-width: 600px;
     margin: 2rem auto;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: var(--bg-color);
     border-radius: 4px;
-    width: 90%;
+    width: 95%;
+    max-width: 600px;
 }
 
 .review-form {
@@ -90,14 +92,14 @@ fieldset {
     font-weight: 400;
 }
 
-/* Inputs, Selects, Textareas */
+
 input[type="text"],
 input[type="date"],
 select,
 textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
     font-family: var(--font-family);
     font-size: 1rem;
@@ -107,7 +109,7 @@ textarea {
     resize: vertical;
 }
 
-/* Star Rating Radio Buttons */
+
 .star-rating {
     display: flex;
     gap: 1rem;
@@ -115,42 +117,45 @@ textarea {
     margin-top: 0.5rem;
 }
 
-.star-label {
+.star-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.star-label {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
     font-weight: 400;
     cursor: pointer;
 }
 
-.star-label span {
-    font-size: 1.2rem;
-    margin-bottom: 0.25rem;
-}
 
-/* Checkboxes */
 .features-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.checkbox-label {
+.checkbox-wrapper {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.checkbox-wrapper label {
     font-weight: 700;
     cursor: pointer;
 }
 
-.checkbox-label input[type="checkbox"] {
+.checkbox-wrapper input[type="checkbox"] {
     width: 1.2rem;
     height: 1.2rem;
 }
 
 /* Submit Button */
 .submit-btn {
-    background-color: var(--white);
+    background-color: var(--light-color);
     color: var(--text-color);
     font-weight: 700;
     font-size: 1.2rem;
@@ -169,7 +174,7 @@ textarea {
 /* Confirmation Page Styles */
 .confirmation-container {
     text-align: center;
-    background-color: var(--white);
+    background-color: var(--light-color);
 }
 
 .confirmation-container h2 {
@@ -189,7 +194,7 @@ textarea {
 .return-link {
     display: inline-block;
     background-color: var(--primary-color);
-    color: var(--white);
+    color: var(--light-color);
     text-decoration: none;
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
@@ -199,4 +204,10 @@ textarea {
 
 .return-link:hover {
     background-color: #1a001a;
+}
+
+@media screen and (min-width: 600px) {
+    main {
+        padding: 2.5rem;
+    }
 }
