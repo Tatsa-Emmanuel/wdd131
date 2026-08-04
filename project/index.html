@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexiLearn - Interactive ESL Hub</title>
+    <meta name="description" content="LexiLearn: Build conversational English vocabulary faster with interactive A2-B1 flashcards and quizzes.">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon">⚙️</span> LexiLearn
+        </div>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <a href="index.html" class="active">Home</a>
+            <a href="study.html">Flashcards</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-card">
+            <div class="hero-header">
+                <h1>Build vocabulary faster</h1>
+                <div class="shield-icon">🛡️</div>
+            </div>
+            <p class="subtitle">Adaptive flashcards, quizzes, offline-ready, privacy-first.</p>
+            
+            <div class="progress-bar">
+                <div id="daily-progress" class="progress-fill"></div>
+            </div>
+            
+            <div class="stats-row">
+                <span>Level: Pre-Intermediate (A2-B1)</span>
+                <span id="today-word-count">Mastered: 0 words</span>
+            </div>
+
+            <div class="action-buttons">
+                <a href="study.html" class="btn primary-btn">Learn Words</a>
+                <a href="quiz.html" class="btn secondary-btn">Take a Quiz</a>
+            </div>
+        </section>
+
+        <!-- Updated Quick Links Grid -->
+        <section class="quick-links">
+            <a href="study.html" class="link-card">
+                <span class="card-icon">🎴</span>
+                <h3>Flashcards</h3>
+            </a>
+            <a href="quiz.html" class="link-card">
+                <span class="card-icon">❓</span>
+                <h3>Quizzes</h3>
+            </a>
+            <!-- Replaced Keyboard Shortcuts -->
+            <a href="contact.html" class="link-card">
+                <span class="card-icon">✉️</span>
+                <h3>Contact Tutor</h3>
+            </a>
+        </section>
+
+        <section class="recent-sessions">
+            <div class="section-header">
+                <h2>Recent Activity</h2>
+                <button id="see-all-btn" class="see-all">See all</button>
+            </div>
+            <div id="session-container"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 | Cameroon</p>
+            <p id="lastModified" class="mod-date"></p>
+            <div class="footer-actions">
+                <a href="references.html" class="reference-link">📚 Site References</a>
+                <button id="reset-btn" class="reset-link">⚠️ Reset Progress</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - LexiLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><span class="icon">⚙️</span> LexiLearn</div>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <a href="index.html">Home</a>
+            <a href="study.html">Flashcards</a>
+            <a href="quiz.html" class="active">Quizzes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="practice-main">
+        <div class="practice-header">
+            <h1>Knowledge Check</h1>
+            <p id="quiz-counter">Question 1</p>
+        </div>
+
+        <!-- Warning if they try to quiz before studying -->
+        <div id="quiz-warning" class="hidden" style="text-align: center; padding: 2rem;">
+            <h2>Hold on! 🛑</h2>
+            <p>You haven't studied any words yet. Go to the Flashcards first to build your knowledge base.</p>
+            <a href="study.html" class="btn primary-btn" style="display: inline-block; margin-top: 1rem;">Go to Flashcards</a>
+        </div>
+
+        <div id="quiz-container" class="flashcard">
+            <!-- JS will inject the question and multiple choice buttons here -->
+        </div>
+
+        <div id="quiz-completion" class="completion-card hidden">
+            <h2>Quiz Complete! 🎉</h2>
+            <p id="final-score-text">You got 0 out of 0 correct.</p>
+            <div class="action-buttons" style="margin-top: 1.5rem;">
+                <a href="index.html" class="btn secondary-btn">Dashboard</a>
+                <button id="btn-restart-quiz" class="btn primary-btn">Quiz Again</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 | Cameroon</p>
+            <p id="lastModified" class="mod-date"></p>
+            <div class="footer-actions">
+                <a href="references.html" class="reference-link">📚 Site References</a>
+                <button id="reset-btn" class="reset-link">⚠️ Reset Progress</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

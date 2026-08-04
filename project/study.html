@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - LexiLearn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><span class="icon">⚙️</span> LexiLearn</div>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <a href="index.html">Home</a>
+            <a href="study.html" class="active">Flashcards</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="practice-main">
+        <div class="practice-header">
+            <h1>Learn Vocabulary</h1>
+            <p id="card-counter">Word 1 of 5</p>
+        </div>
+
+        <div id="flashcard-container" class="flashcard">
+            <!-- JS Template Literals will inject the word and definition here -->
+        </div>
+
+        <div id="study-controls" class="action-buttons">
+            <button id="btn-next-word" class="btn primary-btn" style="width: 100%;">Next Word ➔</button>
+        </div>
+
+        <div id="completion-screen" class="completion-card hidden">
+            <h2>Words Added to Memory! 🧠</h2>
+            <p>You have studied these words. Now it is time to test your knowledge.</p>
+            <div class="action-buttons" style="margin-top: 1.5rem;">
+                <a href="index.html" class="btn secondary-btn">Dashboard</a>
+                <a href="quiz.html" class="btn primary-btn">Take Quiz Now</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 | Cameroon</p>
+            <p id="lastModified" class="mod-date"></p>
+            <div class="footer-actions">
+                <a href="references.html" class="reference-link">📚 Site References</a>
+                <button id="reset-btn" class="reset-link">⚠️ Reset Progress</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

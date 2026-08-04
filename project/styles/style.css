@@ -1,0 +1,670 @@
+/* --- Global Variables --- */
+:root {
+    --primary-navy: #1D3557;
+    --accent-blue: #457B9D;
+    --bg-offwhite: #F1FAEE;
+    --text-charcoal: #1A1A1A;
+    --btn-yellow: #ffea00;
+    --btn-yellow-hover: #e6d300;
+    --card-bg: #ffffff;
+    --gray-bg: #eeeeee;
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-offwhite);
+    color: var(--text-charcoal);
+    font-family: var(--font-body);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: var(--card-bg);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px #e0e0e0;
+    position: relative;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    color: var(--text-charcoal);
+}
+
+#menu-btn {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--primary-navy);
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary-navy);
+    z-index: 10;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    color: var(--bg-offwhite);
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.navigation a:hover, .navigation a.active {
+    background-color: var(--accent-blue);
+}
+
+/* --- Main Content Layout --- */
+main {
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* --- Hero Card --- */
+.hero-card {
+    background-color: #fffae6; 
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.hero-header h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    color: var(--text-charcoal);
+    max-width: 70%;
+}
+
+.shield-icon {
+    background-color: var(--card-bg);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px #e0e0e0;
+}
+
+.subtitle {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.progress-bar {
+    background-color: var(--card-bg);
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: var(--btn-yellow);
+    width: 0%; 
+    height: 100%;
+    transition: width 0.4s ease; /* Adds a nice smooth animation when it loads */
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.btn {
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-body);
+    transition: background-color 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--btn-yellow);
+    color: var(--text-charcoal);
+}
+
+.primary-btn:hover {
+    background-color: var(--btn-yellow-hover);
+}
+
+.secondary-btn {
+    background-color: var(--gray-bg);
+    color: var(--text-charcoal);
+}
+
+.secondary-btn:hover {
+    background-color: #dddddd;
+}
+
+/* --- Quick Links Grid --- */
+.quick-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.link-card {
+    background-color: var(--gray-bg);
+    border-radius: 8px;
+    padding: 1rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-charcoal);
+    transition: transform 0.2s;
+}
+
+.link-card:hover {
+    transform: translateY(-2px);
+    background-color: #e0e0e0;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.link-card h3 {
+    font-size: 0.85rem;
+}
+
+/* --- Recent Sessions --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 {
+    font-size: 1.1rem;
+}
+
+.see-all {
+    background-color: #dddddd;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.session-card {
+    background-color: var(--gray-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.play-btn {
+    background-color: var(--card-bg);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.session-info {
+    flex-grow: 1;
+}
+
+.session-info h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.session-info p {
+    font-size: 0.75rem;
+    color: #555555;
+}
+
+.action-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-navy);
+    color: var(--bg-offwhite);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.reference-link a {
+    color: var(--btn-yellow);
+    text-decoration: underline;
+}
+
+/* --- Desktop Media Query --- */
+@media screen and (min-width: 768px) {
+    header {
+        padding: 1rem 3rem;
+    }
+    
+    #menu-btn {
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+    }
+
+    .navigation a {
+        color: var(--text-charcoal);
+        border-bottom: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin-left: 0.5rem;
+    }
+
+    .navigation a:hover, .navigation a.active {
+        background-color: var(--gray-bg);
+        color: var(--primary-navy);
+    }
+
+    /* Side-by-Side Desktop Layout */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+    }
+
+    .hero-card {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        margin-bottom: 0;
+    }
+
+    .quick-links {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin-bottom: 0;
+    }
+
+    .recent-sessions {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+}
+
+.empty-state {
+    color: #666666;
+    font-style: italic;
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--gray-bg);
+    border-radius: 8px;
+    border: 2px dashed #cccccc;
+}
+
+/* --- Vocabulary Practice Specific Styles --- */
+.practice-main {
+    max-width: 600px; /* Narrower for focus mode */
+}
+
+.practice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+}
+
+.practice-header h1 {
+    font-size: 1.5rem;
+}
+
+#card-counter {
+    font-weight: 600;
+    color: #555555;
+}
+
+.flashcard {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px #cccccc; 
+    margin-bottom: 1.5rem;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-front h2 {
+    font-size: 2.5rem;
+    color: var(--primary-navy);
+    margin-bottom: 0.5rem;
+}
+
+.word-type {
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 1.5rem;
+}
+
+.card-back {
+    border-top: 1px dashed #cccccc;
+    padding-top: 1.5rem;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.card-back .definition {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.card-back .example {
+    color: #444444;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 4px solid var(--accent-blue);
+    border-radius: 4px;
+}
+
+/* Scoring Buttons */
+.success-btn {
+    background-color: #2ecc71; /* Green */
+    color: #ffffff;
+}
+.success-btn:hover {
+    background-color: #27ae60;
+}
+
+.danger-btn {
+    background-color: #e74c3c; /* Red */
+    color: #ffffff;
+}
+.danger-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Completion Screen */
+.completion-card {
+    background-color: #ffffff;
+    border: 2px solid var(--btn-yellow);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px #cccccc;
+}
+
+.completion-card h2 {
+    font-size: 2rem;
+    color: var(--primary-navy);
+    margin-bottom: 1rem;
+}
+
+.completion-card p {
+    font-size: 1.2rem;
+}
+
+/* Utilities */
+.hidden {
+    display: none !important;
+}
+
+/* --- Reset Button --- */
+.reset-link {
+    background: none;
+    border: none;
+    color: #ff6b6b; /* Soft red to indicate a delete/reset action */
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    transition: color 0.3s;
+}
+
+.reset-link:hover {
+    color: #ff4757; /* Darker red on hover */
+}
+
+/* --- Polished Site Footer --- */
+.site-footer {
+    background-color: var(--primary-navy);
+    color: var(--bg-offwhite);
+    padding: 2rem 1rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.mod-date {
+    color: #a8dadc;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #3a5375; 
+    padding-top: 1rem;
+}
+
+.reference-link {
+    color: var(--btn-yellow);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.reference-link:hover {
+    color: var(--btn-yellow-hover);
+    text-decoration: underline;
+}
+
+.reset-link {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.reset-link:hover {
+    color: #ff4757;
+    text-decoration: underline;
+}
+
+/* --- Quiz Immediate Feedback Styles --- */
+.quiz-option {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.quiz-option:disabled {
+    cursor: default;
+}
+
+.status-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 20px;
+}
+
+.correct-answer {
+    background-color: #d4edda !important; /* Pale Green */
+    border-color: #c3e6cb !important;
+    color: #155724 !important;
+}
+
+.wrong-answer {
+    background-color: #f8d7da !important; /* Pale Red */
+    border-color: #f5c6cb !important;
+    color: #721c24 !important;
+    opacity: 0.75; /* Slightly dim the wrong answers */
+}
+
+.footer-actions a,
+.footer-actions button,
+.footer-actions p {
+    margin: 0;
+}
+
+/* --- Contact Form Styles --- */
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 10px #cccccc;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form label, .contact-form legend {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--primary-navy);
+}
+
+.contact-form fieldset {
+    border: none;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.radio-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-wrapper label {
+    font-weight: 400;
+    color: var(--text-charcoal);
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Tutor - LexiLearn</title>
+    <meta name="description" content="Contact a LexiLearn ESL tutor for help with vocabulary, grammar, or phrasing.">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon">⚙️</span> LexiLearn
+        </div>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <a href="index.html">Home</a>
+            <a href="study.html">Flashcards</a>
+            <a href="quiz.html">Quizzes</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <section class="form-container">
+            <h2>Contact Your Tutor</h2>
+            <p style="margin-bottom: 1.5rem;">Have a question about grammar or phrasing? Send a message and an instructor will reply soon!</p>
+            
+            <!-- Added id="contact-form" and removed the action attribute -->
+            <form id="contact-form" class="contact-form">
+                
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="level">Current English Level</label>
+                    <select id="level" name="level" required>
+                        <option value="" disabled selected>Select your level...</option>
+                        <option value="beginner">Beginner (A1)</option>
+                        <option value="pre-intermediate">Pre-Intermediate (A2-B1)</option>
+                        <option value="intermediate">Intermediate (B2)</option>
+                        <option value="advanced">Advanced (C1-C2)</option>
+                    </select>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>What do you need help with?</legend>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="help-grammar" name="help-topic" value="grammar" required>
+                        <label for="help-grammar">Grammar rules</label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="help-vocab" name="help-topic" value="vocabulary" required>
+                        <label for="help-vocab">Vocabulary meaning</label>
+                    </div>
+                    <div class="radio-wrapper">
+                        <input type="radio" id="help-other" name="help-topic" value="other" required>
+                        <label for="help-other">Other</label>
+                    </div>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="message">Your Question</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn primary-btn submit-btn">Send Message</button>
+            </form>
+
+            <!-- Success Message (Hidden by default) -->
+            <div id="form-success-msg" class="completion-card hidden" style="margin-top: 1rem; border-color: #2ecc71;">
+                <h2 style="color: #2ecc71;">Message Sent! ✉️</h2>
+                <p>Your question has been securely routed to your instructor.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 | Cameroon</p>
+            <p id="lastModified" class="mod-date"></p>
+            <div class="footer-actions">
+                <a href="references.html" class="reference-link">📚 Site References</a>
+                <button id="reset-btn" class="reset-link">⚠️ Reset Progress</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

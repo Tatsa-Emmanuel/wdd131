@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - LexiLearn</title>
+    <meta name="description" content="Practice A2-B1 conversational English vocabulary with interactive flashcards.">
+    <meta name="author" content="Tatsa Zoho Noubosse Emmanuel">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/main.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="icon">⚙️</span> LexiLearn
+        </div>
+        <button id="menu-btn" aria-label="Toggle Menu">☰</button>
+        <nav id="main-nav" class="navigation">
+            <a href="index.html">Home</a>
+            <a href="vocabulary.html" class="active">Practice</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="practice-main">
+        <div class="practice-header">
+            <h1>Flashcard Session</h1>
+            <p id="card-counter">Card 1 of 5</p>
+        </div>
+
+        <!-- Dynamic Flashcard Container -->
+        <div id="flashcard-container" class="flashcard">
+            <!-- JavaScript will inject the card content here using Template Literals -->
+        </div>
+
+        <!-- Scoring Controls (Hidden until the card is flipped) -->
+        <div id="score-controls" class="action-buttons hidden">
+            <button id="btn-needs-practice" class="btn danger-btn">Needs Practice</button>
+            <button id="btn-got-it" class="btn success-btn">Got It!</button>
+        </div>
+
+        <!-- Completion Screen (Hidden by default) -->
+        <div id="completion-screen" class="completion-card hidden">
+            <h2>Session Complete! 🎉</h2>
+            <p id="final-score-text">You got 0 out of 5 correct.</p>
+            <div class="action-buttons" style="margin-top: 1.5rem;">
+                <a href="index.html" class="btn secondary-btn">Back to Dashboard</a>
+                <button id="btn-restart" class="btn primary-btn">Practice Again</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="currentyear"></span> | 🚀 Tatsa Zoho Noubosse Emmanuel 🚀 | Cameroon</p>
+            <p id="lastModified" class="mod-date"></p>
+            <div class="footer-actions">
+                <a href="references.html" class="reference-link">📚 Site References</a>
+                <button id="reset-btn" class="reset-link">⚠️ Reset Progress</button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
