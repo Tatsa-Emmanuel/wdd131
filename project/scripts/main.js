@@ -216,8 +216,8 @@ if (quizContainer) {
 
             quizContainer.innerHTML = `
                 <div class="card-front" style="margin-bottom: 2rem;">
-                    <h3>What is the definition of:</h3>
-                    <h2 style="color: var(--accent-blue); font-size: 2.5rem;">${correctWord.word}</h2>
+                    <h2>What is the definition of:</h2> 
+                    <h3 style="color: var(--accent-blue); font-size: 2.5rem;">${correctWord.word}</h3> 
                 </div>
                 <div class="quiz-options-container" style="display: flex; flex-direction: column; gap: 1rem;">
                     ${optionsHTML}

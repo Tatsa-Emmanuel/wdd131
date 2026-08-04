@@ -220,8 +220,8 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.link-card h3 {
-    font-size: 0.85rem;
+.link-card h2 {
+    font-size: 0.95rem; 
 }
 
 /* --- Recent Sessions --- */
@@ -332,8 +332,9 @@ footer p {
     }
 
     .navigation a:hover, .navigation a.active {
-        background-color: var(--gray-bg);
-        color: var(--primary-navy);
+        background-color: #315f7d; 
+        color: #ffffff; 
+    }
     }
 
     /* Side-by-Side Desktop Layout */
@@ -485,18 +486,17 @@ footer p {
 .reset-link {
     background: none;
     border: none;
-    color: #ff6b6b; /* Soft red to indicate a delete/reset action */
-    text-decoration: underline;
+    color: #ff9999; 
     cursor: pointer;
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    margin-top: 1rem;
-    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
     transition: color 0.3s;
 }
 
 .reset-link:hover {
-    color: #ff4757; /* Darker red on hover */
+    color: #ffb3b3; 
+    text-decoration: underline;
 }
 
 /* --- Polished Site Footer --- */
