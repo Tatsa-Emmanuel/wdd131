@@ -361,7 +361,7 @@ footer p {
         grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
-}
+
 
 .empty-state {
     color: #666666;
